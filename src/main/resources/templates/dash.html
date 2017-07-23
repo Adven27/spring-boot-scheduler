@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cars</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+<h2>List of cars</h2>
+
+<table>
+    <tr>
+        <th>name</th>
+        <th>status</th>
+        <th>steps</th>
+    </tr>
+    {{#cars}}
+    <tr>
+        <td>{{name}}</td>
+        <td>{{status}}</td>
+        <td>
+            {{#steps}}
+            <li>{{summary}}</li>
+            {{/steps}}
+        </td>
+    </tr>
+    {{/cars}}
+</table>
+</body>
+</html>
